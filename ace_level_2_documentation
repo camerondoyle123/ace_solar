@@ -1,0 +1,43 @@
+BEGIN METADATA
+MAG and SWEPAM 64-second Averaged IMF and Solar Wind Ion Parameters
+Data downloaded from ACE Science Center on Fri Mar  6 22:04:35 2020
+MAG/SWEPAM Team Software Version: 2.0
+MAG/SWEPAM Team Time/Date Processed: 
+
+
+Note: All timestamps are UT, and refer to the start of the time period.
+year,day,hr,min,sec: year, day of year, hour of day, minutes, seconds.
+fp_year       : fractional year.
+fp_doy        : fractional day-of-year.
+ACEepoch      : seconds since Jan 1 00:00:00 UT 1996.
+Np            : Proton Density (cm^-3).
+Tp            : Radial Component of proton temperature (deg. Kelvin).
+Alpha_ratio   : Ratio of alphas/protons
+Vp            : Proton Speed (km/s)
+r,t,n_dot_RTN : R,T,N-component of proton velocity in RTN coordinates (km/s)
+x,y,z_dot_GSE : X,Y,Z-component of proton velocity in GSE coordinates (km/s)
+x,y,z_dot_GSM : X,Y,Z-component of proton velocity in GSM coordinates (km/s)
+Br            : R-component of mag. field in RTN (nT).
+Bt            : T-component of mag. field in RTN (nT).
+Bn            : N-component of mag. field in RTN (nT).
+Bgse_x        : X-component of mag. field in GSE (nT).
+Bgse_y        : Y-component of mag. field in GSE (nT).
+Bgse_z        : Z-component of mag. field in GSE (nT).
+Bgsm_x        : X-component of mag. field in GSM (nT).
+Bgsm_y        : Y-component of mag. field in GSM (nT).
+Bgsm_z        : Z-component of mag. field in GSM (nT).
+Bmag          : <|B|> magnetic field magnitude (nT).
+Lambda        : mag. field longitude in RTN (0 to 360 degrees).
+Delta         : mag. field latitude in RTN (-90 to 90 degrees).
+dBrms         : RMS values of underlying high-resolution measurements (nT).
+pos_gse_x,y,z : Components of spacecraft position in GSE (km).
+pos_gsm_x,y,z : Components of spacecraft position in GSM (km).
+pos_hs_x,y,z  : Components of spacecraft position in HS (km).
+MAG_pts       : Number of hi-res (16-sec) MAG measurements included in the average.
+A value of -9999.9 indicates bad or missing data.
+
+More Documentation of the ACE SWEPAM level 2 data is at this web site:
+http://www.srl.caltech.edu/ACE/ASC/level2/swepam_l2desc.html
+More Documentation of the ACE MAG level 2 data is at this web site:
+http://www.srl.caltech.edu/ACE/ASC/level2/mag_l2desc.html
+
