@@ -46,7 +46,8 @@ def space_plot(day, df):
         fig.patch.set_alpha(1)
         ax = axs[0]
         hb = ax.hexbin(x_data, y_data, cmap='inferno', 
-                       gridsize=(grid_setting,grid_setting))
+                       gridsize=(grid_setting,grid_setting),
+                       vmin=0, vmax=15)
         # vmin=0, vmax=15 - for controlling the colour limits
         ax.set(xlim=(xmin, xmax), ylim=(ymin, ymax))
         ax.set_title("Regular Hexagon binning")
