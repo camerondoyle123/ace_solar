@@ -4,8 +4,8 @@ import re
 import os
 import numpy as np
 
-ace_data = pd.read_csv('ACE_MAGSWE_Data.txt', delimiter=' ')
-ace_hour = pd.read_csv('full_mag_data.txt', delimiter=' ')
+ace_data = pd.read_csv('../data/ACE_MAGSWE_Data.txt', delimiter=' ')
+ace_hour = pd.read_csv('../data/full_mag_data.txt', delimiter=' ')
 
 # Handy stuff - remove errorneous data
 ace_data = ace_data[ace_data.bgsex != -9999.9]

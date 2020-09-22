@@ -3,12 +3,25 @@ import sys
 import re
 import os
 import numpy as np
+from tqdm import tqdm
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import seaborn as sns
 import gif
 import pylab
 from clean_data import *
+
+# use this for the tqdm cursor bar
+def up():
+    # My terminal breaks if we don't flush after the escape-code
+    sys.stdout.write('\x1b[1A')
+    sys.stdout.flush()
+
+def down():
+    # I could use '\x1b[1B' here, but newline is faster and easier
+    sys.stdout.write('\n')
+    sys.stdout.flush()
+
 
 @gif.frame
 def space_plot(day, df):
@@ -57,13 +70,18 @@ def space_plot(day, df):
                      size = 16)
     
 
+# yes, the up(), down() is ridiculous - but it works!
 frames = []
-for day in days_needed:
-    for hr in hours_needed:
+print('generating .gif image...')
+for day in tqdm(days_needed, desc='day processing'):
+    for hr in tqdm(hours_needed, 'hour processing', leave=True):
+        down()
         data = ace_hour[(ace_hour.hr==hr) & (ace_hour.day==day)]
         frame = space_plot(day=day, df=data)
         frames.append(frame)
+        up()
+    up()
+down()
 
-
-
-gif.save(frames, 'mag_field.gif', duration=100)
+gif.save(frames, '../output/mag_field.gif', duration=100)
+print('success! pushed .gif to /output/mag_field.gif')
